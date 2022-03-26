@@ -19,7 +19,7 @@ def get_user_by_id(request, user_id):
 
 @csrf_exempt
 @require_POST
-def post_advert(request, user_id):
+def post_purchase(request, user_id):
     return JsonResponse(
         {
             'code': 200,
