@@ -1,3 +1,17 @@
+# Main
+run: build up migrate
+
+stop:
+	docker-compose down
+
+rerun: stop run
+
+restart: stop up migrate
+
+# Secondary
+build:
+	docker-compose build
+
 up:
 	docker-compose up -d
 
@@ -6,6 +20,3 @@ test: up
 
 migrate: up
 	docker-compose exec django-app python3 /app/steam/manage.py migrate
-
-down:
-	docker-compose down

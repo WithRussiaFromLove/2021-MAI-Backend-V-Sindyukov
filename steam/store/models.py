@@ -5,6 +5,6 @@ from game.models import Game
 
 class Store(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="Пользователь")
-    game = models.ForeignKey(Game, on_delete=models.CASCADE, verbose_name="Авто")
+    game = models.ForeignKey(Game, on_delete=models.CASCADE, verbose_name="Игра")
     price = models.IntegerField(verbose_name="Цена")
     date = models.DateField()
