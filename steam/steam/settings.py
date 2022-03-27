@@ -25,7 +25,9 @@ SECRET_KEY = 'x3d!ua_+^o1x@1e8dm#-0z$w0(lzi7f_b@sl=s*a7ht3%f0zo)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '*'
+]
 
 
 # Application definition

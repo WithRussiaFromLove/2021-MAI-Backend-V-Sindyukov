@@ -1,0 +1,9 @@
+FROM python:3.8-slim-buster
+
+ADD . /app
+WORKDIR /app
+RUN apt-get update \
+    && apt-get -y install libpq-dev gcc
+RUN pip install -r requirements.txt
+
+ENTRYPOINT ["python", "steam/manage.py", "runserver", "0.0.0.0:8000"]
